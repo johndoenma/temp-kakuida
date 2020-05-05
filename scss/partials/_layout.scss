@@ -1,0 +1,121 @@
+// BOX SIZING 
+* {box-sizing: border-box; }
+html, body { height: 100%; }
+
+
+// RESPONSIVE TYPE SCALING PER BREAKPOINT
+// 14px on Small Screens (mobile}
+// 16px on Medium Screens (tablets}
+// 18px on Large Screens (desktop+}
+
+
+
+body {
+    // font-size: 87.5%; // 14px
+    margin: 0;
+
+}
+
+.container {
+    // padding: 0 4%;
+    margin: 0 auto;
+    // border: 1px solid yellow;
+    max-width: 100%;
+    text-align: center;
+}
+
+
+@media (min-width: $breakpoint-small) {
+    body {
+        font-size: 100%; // 16px
+    }
+}
+
+@media (min-width: $breakpoint-medium) {
+    .container {
+        max-width: $breakpoint-medium - 50;
+    }
+}
+
+@media (min-width: $breakpoint-large) {
+    body {
+        font-size: 112.5%; // 18px
+    }
+    .container {
+        max-width: $breakpoint-medium;
+    }
+}
+
+
+/* PRODUCT FILTER LISTS */
+
+.container.list {
+    // overflow: hidden;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    // border: 1px solid blue;
+  }
+  
+.filterDiv {
+    // float: left;
+    display: none; /* Hidden by default */
+    margin-top: 2em;
+    width: 49.5%;
+    // border: 1px solid pink;
+
+    @media (max-width:767px) {
+        margin: 0 auto;
+    }
+
+    @media (min-width:768px) {
+        width: 24.5%;  
+        margin-left: .25em;
+    }
+
+}
+
+
+  
+/* The "show" class is added to the filtered elements */
+.show {
+display: block;
+// border: 1px solid rgb(0, 38, 255);
+// background-color: blue;
+}
+  
+/* GRID */
+/* Default Grid (on SMALL+ Screen Sizes) */
+
+.row .column {
+    margin-bottom: 2%;
+}
+
+/* Medium Grid (on MEDIUM+ Screen Sizes) */
+@media (min-width: 768px) {
+
+    .row {
+        display: flex;
+        justify-content: center;
+        margin-left: -1%;
+        margin-right: -1%;
+    }
+
+    .row .column {
+        flex-grow: 1;
+        margin-left: 1%;
+        margin-right: 1%;
+    }
+
+    .column.centered {
+        flex-grow: 0;
+    }
+
+    .one-whole.column { width: 100%; }
+    .one-half.column { width: 48%; }
+    .one-third.column { width: 31.3333% }
+    .two-thirds.column { width: 64.6666% }
+    .one-forth.column { width: 23% }
+    .one-fifth.column { width: 18% }
+}

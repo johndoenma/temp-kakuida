@@ -1,0 +1,136 @@
+// BUTTONS
+
+button {
+    font-size: inherit;
+    outline:none;
+}
+
+button,
+.button {
+    font-size: .8em;
+    letter-spacing: .3em;
+    text-transform: uppercase;
+    background-color: $color-links;
+    color: #fff;
+    padding: .9em 1.6em;
+    display: inline-block;
+    margin: .5em auto .5em auto;
+    border-radius: 3px;
+    margin-bottom: 2em;
+    border: 1px solid $color-links;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all.2s ease;
+    
+
+    &:hover {
+        color: #fff;
+        background-color: $color-links-dark;
+        border-color: $color-links-dark;
+    }
+
+    &.alt {
+        color: $color-links;
+        background-color: rgba(0, 0, 0, 0);
+        border: 1px solid $color-links;
+
+        &:hover {
+            background-color: $color-links;
+            color: #fff; 
+            border-color: $color-links;
+        }
+    }
+    
+    @media (min-width:768px) {
+
+        &.ShopNow {
+            font-size: 70%;
+            padding: .9em 1.8em;
+            margin-top: .9em;
+        }
+    }
+}
+
+input[type="submit"] {
+    font-size: .8em;
+    letter-spacing: .3em;
+    text-transform: uppercase;
+    background-color: $color-links;
+    color: #fff;
+    height: 50px;
+    padding: .9em 1.6em;
+    display: inline-block;
+    margin: 0;
+    margin-left: .8em;
+    margin-right: 0;
+    border-radius: 3px;
+    border: 1px solid $color-links;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all.2s ease;
+    outline: none;
+    -webkit-appearance: none;
+
+    &:hover {
+        color: #fff;
+        background-color: $color-links-dark;
+        border-color: $color-links-dark;
+    }
+}
+
+textarea,
+input.text,
+input[type="text"],
+input[type="button"],
+input[type="submit"] {
+    -webkit-appearance: none;
+}
+
+.underline-link {
+    font-size: .8em;
+    letter-spacing: .3em;
+    text-transform: uppercase;
+    color: $color-text-body;
+    padding: .5em 0;
+    margin: .5em auto .5em auto;
+    margin-bottom: 2em;
+    cursor: pointer;
+    text-decoration: none;
+    border-bottom: 1.5px solid $color-text-body;
+    transition: all 0.25s linear;
+    // position: relative;
+    // background-color: lawngreen;
+
+    &:hover{
+        border-bottom: 1.5px solid $color-links;
+    }
+}
+
+// FILTER BUTTON
+
+.btn {
+    color: $color-text-body;
+    font-weight: 400;
+    letter-spacing: .15em;
+    // text-transform: lowercase;
+    margin: .8em;
+    margin-bottom: 2em;
+    border: none;
+    outline: none;
+    padding: 12px 1px 12px 4px;
+    background-color: white;
+    cursor: pointer;
+}
+  
+.btn:hover {
+    color: $color-links;
+    background-color: #ffff;
+  }
+  
+.btn.active {
+    // font-weight: 500;
+    background-color: rgb(255, 255, 255);
+    color: $color-links;
+    border-radius: 0;
+    border-bottom: 0.15em solid $color-links;
+}
