@@ -1,3 +1,3 @@
 # Kakuida
 
-[View Demo](https://yooonn.github.io/Kakuida/)
+[View Demo](https://johndoenma.github.io/temp-kakuida/)
